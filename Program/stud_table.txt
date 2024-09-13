@@ -1,0 +1,28 @@
+sqlite> .open stud0274
+sqlite> create table stud
+   ...> (sid int primary key,sname text,dept,paid_fee);
+sqlite> insert into stud values(1,'om','bca',9000),
+   ...> (2,'sai','bba',8000),
+   ...> (3,'ram','bca',8500),
+   ...> (4,'alice','bba',6000),
+   ...> (5,'bob','bca',10000),
+   ...> (6,'jack','bba',11000),
+   ...> (7,'smith','bca',9500),
+   ...> (8,'zade','bba',12000);
+sqlite> .mode box
+sqlite> select * from stud;
++-------------------------------+
+¦ sid ¦ sname ¦ dept ¦ paid_fee ¦
++-----+-------+------+----------¦
+¦ 1   ¦ om    ¦ bca  ¦ 9000     ¦
+¦ 2   ¦ sai   ¦ bba  ¦ 8000     ¦
+¦ 3   ¦ ram   ¦ bca  ¦ 8500     ¦
+¦ 4   ¦ alice ¦ bba  ¦ 6000     ¦
+¦ 5   ¦ bob   ¦ bca  ¦ 10000    ¦
+¦ 6   ¦ jack  ¦ bba  ¦ 11000    ¦
+¦ 7   ¦ smith ¦ bca  ¦ 9500     ¦
+¦ 8   ¦ zade  ¦ bba  ¦ 12000    ¦
++-------------------------------+
+sqlite> .mode column
+sqlite> .mode csv
+sqlite> .output D:/23bca274/sqlite3/CSV/stud.csv
