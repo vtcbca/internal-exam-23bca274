@@ -19,7 +19,7 @@ sqlite> insert into stud1 values(1,'alice','BCA',5000),
 
 sqlite> .mode box
 
-sqlite> select * from stud;
+sqlite> select * from stud1;
 
 +-------------------------------+
 ¦ sid ¦ sname  ¦ dept ¦ paid_fee ¦
