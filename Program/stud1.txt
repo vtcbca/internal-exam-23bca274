@@ -1,0 +1,41 @@
+[1] Create table stud(id, name, dept, paidfee) with 8 records. Create stud.csv file of the stud data (Department will be BBA and BCA). 
+   
+   Read csv file using reader object and write data with remaining fee. ( Total fee of bba is 13400 and bca is 15400 Rs)
+
+
+sqlite> .open student
+
+sqlite> create table stud1
+   ...> (sid int primary key,sname text,dept,paid_fee);
+
+sqlite> insert into stud1 values(1,'alice','BCA',5000),
+   ...> (2,'bob','BBA',9000),
+   ...> (3,'Charlie','BCA',8000),
+   ...> (4,'David','BBA',8500),
+   ...> (5,'Eva','BCA',7000),
+   ...> (6,'Frank','BBA',10000),
+   ...> (7,'Grace','BCA',12000),
+   ...> (8,'Herry','BBA',5500);
+
+sqlite> .mode box
+
+sqlite> select * from stud;
+
++-------------------------------+
+¦ sid ¦ sname  ¦ dept ¦ paid_fee ¦
++-----+--------+------+----------¦
+¦ 1   ¦ alice  ¦ BCA  ¦ 5000     ¦
+¦ 2   ¦ bob    ¦ BBA  ¦ 9000     ¦
+¦ 3   ¦ Charlie¦ BCA  ¦ 8000     ¦
+¦ 4   ¦ David  ¦ BBA  ¦ 8500     ¦
+¦ 5   ¦ Eva    ¦ BCA  ¦ 7000     ¦
+¦ 6   ¦ Frank  ¦ BBA  ¦ 10000    ¦
+¦ 7   ¦ Grace  ¦ BCA  ¦ 12000    ¦
+¦ 8   ¦ Herry  ¦ BBA  ¦ 5500     ¦
++-------------------------------+
+
+sqlite> .mode column
+
+sqlite> .mode csv
+
+sqlite> .output D:/23bca274/sqlite3/CSV/stud1.csv
