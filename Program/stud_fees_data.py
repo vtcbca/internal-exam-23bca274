@@ -11,14 +11,15 @@ import csv
 
 students = []
 
-with open("D:\\sqlite\\csv\\stud1.csv", "r") as f:
+#with open("D:\\sqlite\\csv\\stud1.csv", "r") as f:
+f=open("D:\\sqlite\\csv\\stud1.csv", "r")
     r = csv.reader(f)
     next(r)
     for row in r:
         if all(row):
             students.append(row)
 print(students)
-
+f.close()
 #Define the total fees of BCA and BBA and convert paidfee
 #into integer form and appending each data into a list
 
